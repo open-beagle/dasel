@@ -20,4 +20,4 @@ BUILD_VERSION="${BUILD_VERSION:-v2.8.1}"
 LDFLAGS="-s -w -X github.com/tomwright/dasel/v2/internal.Version=${BUILD_VERSION} -X github.com/tomwright/dasel/v2/internal.Commit=${GIT_COMMIT} -X github.com/tomwright/dasel/v2/internal.GitDescribe=${GIT_DESCRIBE}"
 
 export GOARCH=loong64
-go build --ldflags "${LDFLAGS}" -o tmp/dasel-linux-$GOARCH ./cmd/dasel
+go build --ldflags "${LDFLAGS}" -o .tmp/dasel-linux-$GOARCH ./cmd/dasel
