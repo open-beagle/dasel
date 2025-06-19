@@ -15,19 +15,11 @@ git merge v2.8.1
 ```bash
 # cross
 docker run --rm -it \
--v $PWD/:/go/src/github.com/TomWright/dasel \
--w /go/src/github.com/TomWright/dasel \
--e BUILD_VERSION=v2.8.1 \
-registry.cn-qingdao.aliyuncs.com/wod/golang:1.22 \
-bash .beagle/build.sh
-
-# loong64
-docker run --rm -it \
--v $PWD/:/go/src/github.com/TomWright/dasel \
--w /go/src/github.com/TomWright/dasel \
--e BUILD_VERSION=v2.8.1 \
-registry.cn-qingdao.aliyuncs.com/wod/golang:1.22-loongnix \
-bash .beagle/build-loong64.sh
+  -v $PWD/:/go/src/github.com/TomWright/dasel \
+  -w /go/src/github.com/TomWright/dasel \
+  -e BUILD_VERSION=v2.8.1 \
+  registry.cn-qingdao.aliyuncs.com/wod/golang:1.24-alpine \
+  bash .beagle/build.sh
 ```
 
 ## cache
